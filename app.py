@@ -26,8 +26,11 @@ with st.form("strengths_form"):
         "Bugs Bunny", "Victorian British", "Filmy"
     ])
 
-    openai_api_key = st.text_input("🔑 Your OpenAI API Key", type="password")
+    
     submitted = st.form_submit_button("✨ Find My Strengths")
+    
+openai_api_key = st.secrets["OPENAI_API_KEY"]
+
 
 # --- Tone Style Mapping ---
 tone_styles = {
