@@ -8,18 +8,16 @@ st.markdown("Answer the questions using keywords or short phrases. Choose your f
 
 # --- User Inputs ---
 with st.form("strengths_form"):
-    col1, col2 = st.columns(2)
-    with col1:
-        job_role = st.text_input("1️⃣ Your current job role")
-        education = st.text_input("2️⃣ Education or training")
-        tasks_enjoyed = st.text_input("3️⃣ Tasks you enjoy")
-        help_with = st.text_input("4️⃣ Things people ask your help with")
-        energizers = st.text_input("5️⃣ What energizes you most")
-    with col2:
-        recent_win = st.text_input("6️⃣ A recent win you're proud of")
-        compliments = st.text_input("7️⃣ Common compliments or feedback")
-        hidden_strength = st.text_input("8️⃣ A hidden or misunderstood strength")
-        dream_life = st.text_input("9️⃣ Dream work/life situation")
+    job_role = st.text_input("1️⃣ Your current job role (e.g., UX designer, student)")
+    education = st.text_input("2️⃣ Education or training (e.g., M.Des, self-taught, MBA)")
+    tasks_enjoyed = st.text_input("3️⃣ Tasks you enjoy (e.g., designing, teaching, coding)")
+    help_with = st.text_input("4️⃣ Things people ask your help with (e.g., advice, organizing)")
+    energizers = st.text_input("5️⃣ What energizes you most (e.g., learning, brainstorming)")
+    recent_win = st.text_input("6️⃣ A recent win you're proud of (e.g., launched app, led team)")
+    compliments = st.text_input("7️⃣ Common compliments or feedback (e.g., empathetic, reliable)")
+    hidden_strength = st.text_input("8️⃣ A hidden or misunderstood strength (e.g., perfectionism)")
+    dream_life = st.text_input("9️⃣ Dream work/life situation (e.g., creator, team leader, remote)")
+
 
     tone = st.selectbox("🎭 Choose your tone:", [
         "Friendly", "Poetic", "Humorous", "Deep Insightful",
