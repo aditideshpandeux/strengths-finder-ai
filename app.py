@@ -3,6 +3,27 @@ import openai
 
 # --- Page Setup ---
 st.set_page_config(page_title="Strengths Finder AI", page_icon="🌟")
+
+st.markdown(
+    """
+    <style>
+    body {
+        background-color: #D5C2FF;
+    }
+    .block-container {
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+    }
+    input, textarea {
+        background-color: #ffffff !important;
+        border-radius: 10px;
+        padding: 10px;
+    }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
+
 st.title("🌟 Strengths Finder AI")
 st.markdown("Answer the questions using keywords or short phrases. Choose your favorite tone, then click the button to discover your strengths! 💪")
 
