@@ -101,6 +101,30 @@ Answers:
                 st.markdown("---")
                 st.subheader("🔍 Here's what I see in you:")
                 st.write(output)
+                import streamlit.components.v1 as components
+
+                share_message = "Just discovered my superpowers via this AI ✨ https://strengths-finder-ai.streamlit.app"
+                
+                st.markdown("### 📣 Share Your Strengths")
+                st.write("Click below to copy a shareable message:")
+                
+                components.html(f"""
+                    <input type="text" value="{share_message}" id="shareText" 
+                        style="width: 100%; padding: 10px; font-size: 16px; border-radius: 6px; border: 1px solid #ccc; margin-bottom: 10px;" 
+                        readonly>
+                    <button onclick="copyText()" 
+                        style="padding: 10px 20px; font-size: 16px; background-color: #6C4BB4; color: white; border: none; border-radius: 6px; cursor: pointer;">
+                        📋 Copy to Clipboard
+                    </button>
+                    <script>
+                    function copyText() {{
+                        var copyText = document.getElementById("shareText");
+                        copyText.select();
+                        document.execCommand("copy");
+                        alert("Copied to clipboard!");
+                    }}
+                    </script>
+                """, height=110)
 
             except Exception as e:
                 st.error(f"Something went wrong: {e}")
