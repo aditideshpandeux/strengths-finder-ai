@@ -8,7 +8,7 @@ st.markdown(
     """
     <style>
     body {
-        background-color: #D5C2FF;
+        background: linear-gradient(to bottom, #ffffff 0%, #D5C2FF 100%);
     }
     .block-container {
         padding-top: 2rem;
