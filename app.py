@@ -98,8 +98,6 @@ tone_styles = {
     "Your mission: make the user feel like the hero of their own blockbuster. Dilo ko choo jaana chahiye."
     )
 
-    ),
-
     "Normal": (
         "You're a warm, supportive, professional career coach. "
         "Offer kind, encouraging feedback with a balance of clarity and optimism. "
