@@ -134,6 +134,13 @@ tone_styles = {
 if submitted:
     if not openai_api_key:
         st.error("Please enter your OpenAI API key.")
+        elif all(
+        not field.strip() for field in [
+            job_role, education, tasks_enjoyed, help_with, energizers,
+            recent_win, compliments, hidden_strength, dream_life
+        ]
+    ):
+        st.warning("Please tell me a little about you, so I can find your strengths.")
     else:
         with st.spinner("Analyzing your hidden brilliance... 🧠✨"):
             openai.api_key = openai_api_key
