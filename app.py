@@ -142,6 +142,9 @@ Answers:
 7. Feedback received: {compliments}
 8. Hidden/misunderstood strength: {hidden_strength}
 9. Dream work/life: {dream_life}
+Make sure your tone matches the system message. For Nana Patekar: use short, sharp lines. Speak like a tough-love mentor. Use strong phrasing, repetition, and emotional rhythm. Cut the fluff. Be direct. Make the user feel jolted awake — but seen.
+Make sure your tone includes iconic-sounding lines in phonetic Hindi, just like a classic Bollywood climax scene.
+
 """
 
             try:
