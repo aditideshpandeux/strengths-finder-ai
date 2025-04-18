@@ -42,7 +42,7 @@ with st.form("strengths_form"):
        "Grumpy Therapist",
        "Poetic",
        "Bollywood",
-       "Nana Patekar"
+       "Nana Patekar",
        "Normal",
     ])
 
