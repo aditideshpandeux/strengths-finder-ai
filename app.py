@@ -9,20 +9,28 @@ st.markdown(
     <style>
     body {
         background: linear-gradient(to bottom, #ffffff 0%, #D5C2FF 100%);
+        background-attachment: fixed;
     }
     .block-container {
         padding-top: 2rem;
         padding-bottom: 2rem;
+        background-color: rgba(255, 255, 255, 0.85);
+        border-radius: 12px;
+        box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+        padding: 2rem;
     }
     input, textarea {
         background-color: #ffffff !important;
         border-radius: 10px;
         padding: 10px;
+        border: 1px solid #ccc;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.05);
     }
     </style>
     """,
     unsafe_allow_html=True
 )
+
 
 st.title("🌟 Strengths Finder AI")
 st.markdown("Answer the questions using keywords or short phrases. Choose your favorite tone, then click the button to discover your strengths! 💪")
