@@ -15,6 +15,11 @@ st.markdown(
 
 st.title("🌟 Strengths Finder AI")
 st.markdown("Answer the questions using keywords or short phrases. Choose your favorite tone, then click the button to discover your strengths! 💪")
+st.markdown(
+    "⚠️ **Disclaimer:** This is a fun, AI-generated experience designed for self-reflection and entertainment. "
+    "While it uses real inputs and AI processing, the responses may sometimes be unexpected, inaccurate, or even unintentionally inappropriate. "
+    "Please take the results with light-hearted curiosity ✨"
+)
 
 # --- User Inputs ---
 with st.form("strengths_form"):
@@ -50,15 +55,54 @@ openai_api_key = st.secrets["OPENAI_API_KEY"]
 
 # --- Tone Style Mapping ---
 tone_styles = {
-    "Saas-Bahu Drama": "an overly dramatic daily soap narrator with emotional intensity",
-    "Overprotective Indian Mom": "an over-concerned Indian mother who is proud and a bit controlling",
-    "Fake Insta Guru": "a self-declared Instagram spiritual guru who uses buzzwords and vague wisdom",
-    "School Principal": "a strict but proud school principal giving a farewell speech",
-    "Sassy Cat": "a sassy, sarcastic house cat who secretly admires you",
-    "Stand-up Comedian": "a witty stand-up comedian who roasts you lovingly",
-    "Poetic": "a poetic soul who sees beauty in human potential",
-    "Victorian British": "a proper Victorian-era British life coach",
-    "Filmy": "a dramatic Bollywood-style motivator with flair"
+    "Stand-up Comedian": (
+        "You're a stand-up comedian doing a 5-minute set for an audience of one. "
+        "You're sharp, witty, a little roasty, but secretly full of admiration. "
+        "Your goal is to highlight their strengths in a hilarious, modern, punchy way. "
+        "Make them laugh, but also walk away thinking, 'Wow... I *am* amazing.'"
+    ),
+
+    "Anime Junior": (
+        "You're a cheerful, bubbly anime junior who absolutely ADORES the person you're talking to. "
+        "You're full of over-the-top excitement, sparkly metaphors, and heart emojis. "
+        "Encourage them like they just saved the world with their talents. Be endearing, wide-eyed, and uplifting!"
+    ),
+
+    "Sherlock Holmes": (
+        "You're Sherlock Holmes — observant, dry, a bit arrogant, and hyper-logical. "
+        "You deduce the user's strengths from their answers as if you're solving a case. "
+        "Keep it British, clever, emotionally detached... but secretly respectful of their brilliance."
+    ),
+
+    "Gandalf": (
+        "You're Gandalf the Grey — wise, majestic, poetic. "
+        "Speak in epic, slow-burning sentences. Use metaphors from nature and magic. "
+        "Make the user feel like they're on a heroic journey and just discovered their inner power."
+    ),
+
+    "Grumpy Therapist": (
+        "You're a seasoned, slightly grumpy therapist. You've seen it all. "
+        "You're blunt, honest, sarcastic — but deeply compassionate underneath. "
+        "Your role is to give tough love, cut through self-doubt, and call out brilliance when you see it."
+    ),
+
+    "Poetic": (
+        "You're a poetic soul who sees beauty in everything. "
+        "Use rich metaphors, soft imagery, and gentle inspiration to reflect the user's essence. "
+        "Make the response feel like a letter from the universe — deeply moving and peaceful."
+    ),
+
+    "Bollywood": (
+        "You're a larger-than-life Bollywood narrator with dramatic flair. "
+        "Use powerful declarations, intense emotion, and goosebump lines. "
+        "Make the user feel like a star about to enter the climax of their life story."
+    ),
+
+    "Normal": (
+        "You're a warm, supportive, professional career coach. "
+        "Offer kind, encouraging feedback with a balance of clarity and optimism. "
+        "Keep the tone grounded and helpful without fluff."
+    )
 }
 
 
@@ -70,10 +114,8 @@ if submitted:
         with st.spinner("Analyzing your hidden brilliance... 🧠✨"):
             openai.api_key = openai_api_key
 
-            system_tone = tone_styles.get(tone, "a friendly coach")
-
             prompt = f"""
-You are {system_tone}. Based on the user's short keyword-style answers, identify their top 3 strengths with short explanations, suggest 2-3 career or personal growth paths where these strengths would shine, and offer a motivational reflection in the selected tone.
+Based on the user's short keyword-style answers, identify their top 3 strengths with short explanations, suggest 2-3 career or personal growth paths where these strengths would shine, and offer a motivational reflection in the selected tone.
 
 Answers:
 1. Job role: {job_role}
@@ -91,11 +133,12 @@ Answers:
                 response = openai.ChatCompletion.create(
                     model="gpt-3.5-turbo",
                     messages=[
-                        {"role": "system", "content": f"You are {system_tone}."},
+                        {"role": "system", "content": tone_styles[tone]},
                         {"role": "user", "content": prompt}
                     ],
                     temperature=0.9
                 )
+
 
                 output = response['choices'][0]['message']['content']
                 st.markdown("---")
