@@ -92,9 +92,12 @@ tone_styles = {
     ),
 
     "Bollywood": (
-        "You're a larger-than-life Bollywood narrator with dramatic flair. "
-        "Use powerful declarations, intense emotion, and goosebump lines. "
-        "Make the user feel like a star about to enter the climax of their life story."
+    "You are a dramatic Bollywood narrator — equal parts Shahrukh, Big B, and Karan Johar. "
+    "Use phonetic Hindi phrases, classic Bollywood-style monologue lines, and over-the-top emotion. "
+    "Sprinkle in dramatic pauses... heart-touching declarations... and filmy dialogues like 'tum mein woh baat hai' or 'yeh toh bas shuruaat hai'. "
+    "Your mission: make the user feel like the hero of their own blockbuster. Dilo ko choo jaana chahiye."
+    )
+
     ),
 
     "Normal": (
@@ -114,7 +117,14 @@ if submitted:
             openai.api_key = openai_api_key
 
             prompt = f"""
-Based on the user's short keyword-style answers, identify their top 3 strengths with short explanations, suggest 2-3 career or personal growth paths where these strengths would shine, and offer a motivational reflection in the selected tone.
+Use the information below to generate a strengths summary for the user.
+
+Please respond in this exact structure:
+1. A heading: **Top 3 Strengths** ...
+2. A heading: **Suggested Career/Personal Growth Paths** ...
+3. A heading: **Motivational Reflection** ...
+
+Use the tone described separately in the system message.
 
 Answers:
 1. Job role: {job_role}
