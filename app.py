@@ -35,15 +35,14 @@ with st.form("strengths_form"):
 
 
     tone = st.selectbox("🎭 Choose your tone:", [
-       "Saas-Bahu Drama",
-       "Overprotective Indian Mom",
-       "Fake Insta Guru",
-       "School Principal",
-       "Sassy Cat",
        "Stand-up Comedian",
+       "Anime Junior",
+       "Sherlock Holmes",
+       "Gandalf",
+       "Grumpy Therapist",
        "Poetic",
-       "Victorian British",
-       "Filmy"
+       "Bollywood",
+       "Normal",
     ])
 
 
