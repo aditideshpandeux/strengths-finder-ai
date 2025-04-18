@@ -135,7 +135,7 @@ Answers:
                         {"role": "system", "content": tone_styles[tone]},
                         {"role": "user", "content": prompt}
                     ],
-                    temperature=0.9
+                    temperature=1.0
                 )
 
 
