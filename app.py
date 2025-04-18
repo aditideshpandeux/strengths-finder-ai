@@ -134,7 +134,7 @@ tone_styles = {
 if submitted:
     if not openai_api_key:
         st.error("Please enter your OpenAI API key.")
-        elif all(
+    elif all(
         not field.strip() for field in [
             job_role, education, tasks_enjoyed, help_with, energizers,
             recent_win, compliments, hidden_strength, dream_life
