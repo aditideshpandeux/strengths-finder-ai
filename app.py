@@ -30,9 +30,17 @@ with st.form("strengths_form"):
 
 
     tone = st.selectbox("🎭 Choose your tone:", [
-        "Friendly", "Poetic", "Humorous", "Deep Insightful",
-        "Bugs Bunny", "Victorian British", "Filmy"
+       "Saas-Bahu Drama",
+       "Overprotective Indian Mom",
+       "Fake Insta Guru",
+       "School Principal",
+       "Sassy Cat",
+       "Stand-up Comedian",
+       "Poetic",
+       "Victorian British",
+       "Filmy"
     ])
+
 
     
     submitted = st.form_submit_button("✨ Find My Strengths")
@@ -42,14 +50,17 @@ openai_api_key = st.secrets["OPENAI_API_KEY"]
 
 # --- Tone Style Mapping ---
 tone_styles = {
-    "Friendly": "a friendly and supportive career coach",
+    "Saas-Bahu Drama": "an overly dramatic daily soap narrator with emotional intensity",
+    "Overprotective Indian Mom": "an over-concerned Indian mother who is proud and a bit controlling",
+    "Fake Insta Guru": "a self-declared Instagram spiritual guru who uses buzzwords and vague wisdom",
+    "School Principal": "a strict but proud school principal giving a farewell speech",
+    "Sassy Cat": "a sassy, sarcastic house cat who secretly admires you",
+    "Stand-up Comedian": "a witty stand-up comedian who roasts you lovingly",
     "Poetic": "a poetic soul who sees beauty in human potential",
-    "Humorous": "a witty coach who uses humor to uplift",
-    "Deep Insightful": "a philosophical guide with reflective insights",
-    "Bugs Bunny": "Bugs Bunny with wisecracks and street smarts",
     "Victorian British": "a proper Victorian-era British life coach",
     "Filmy": "a dramatic Bollywood-style motivator with flair"
 }
+
 
 # --- Generate Response ---
 if submitted:
