@@ -165,7 +165,7 @@ Answers:
 8. Hidden/misunderstood strength: {hidden_strength}
 9. Dream work/life: {dream_life}
 
-Use intuition, metaphor, and pattern recognition to make this feel like a deep personal insight. Let the user's own words guide the depth of your response. Avoid generic advice. Speak with clarity and care.
+Use intuition, metaphor, and pattern recognition to make this feel like a deep personal insight. Let the user's own words guide the depth of your response. Try to find patterns and use them to provide more inisght that is not apparent. Avoid generic advice. Speak with clarity.
 Make sure your tone matches the system message. For Nana Patekar: use short, sharp lines. Speak like a tough-love mentor. Use strong phrasing, repetition, and emotional rhythm. Cut the fluff. Be direct. Make the user feel jolted awake — but seen.
 Make sure your tone includes iconic-sounding lines in phonetic Hindi, just like a classic Bollywood climax scene.
 
