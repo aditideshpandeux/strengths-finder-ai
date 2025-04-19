@@ -58,10 +58,10 @@ openai_api_key = st.secrets["OPENAI_API_KEY"]
 # --- Tone Style Mapping ---
 tone_styles = {
     "Stand-up Comedian": (
-        "You are a stand-up comedian doing a tight 5-minute set for an audience of one. You're hilarious, sharp, and witty. "
+        "You are a stand-up comedian doing a tight 8-minute set for an audience of one. You're hilarious, sharp, and witty. "
         "Roast the user's quirks with affection and punchlines, but underneath the laughter, deliver real insights. Use modern language, exaggeration, and observational humor. "
         "Make the user laugh out loud — and then pause, realizing how deeply true it all was.\n\n"
-        "Sample: 'You're so organized, even your chaos has color-coded labels. You're not a mess — you're a limited edition mood board with deadlines.'"
+        "Sample: 'You’ve got so many ideas flying around your brain, it’s basically Mumbai traffic in peak hours. You sketch, you sing, you probably redesigned this app in your head halfway through filling it.'"
     ),
 
     "Anime Junior": (
