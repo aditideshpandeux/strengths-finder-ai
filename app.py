@@ -195,7 +195,7 @@ Make sure your tone includes iconic-sounding lines in phonetic Hindi, just like 
                 
                 components.html(f"""
                     <input type="text" value="{share_message}" id="shareText" 
-                        style="width: 90%; padding: 10px; font-size: 16px; border-radius: 6px; border: 1px solid #ccc; margin-bottom: 10px;" 
+                        style="width: 99%; padding: 10px; font-size: 16px; border-radius: 6px; border: 1px solid #ccc; margin-bottom: 10px;" 
                         readonly>
                     <button onclick="copyText()" 
                         style="padding: 10px 20px; font-size: 16px; background-color: #6C4BB4; color: white; border: none; border-radius: 6px; cursor: pointer;">
