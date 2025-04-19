@@ -190,7 +190,7 @@ Make sure your tone includes iconic-sounding lines in phonetic Hindi, just like 
                 share_message = "Just discovered my superpowers via this AI ✨ https://strengths-finder-ai.streamlit.app"
                 
                 st.markdown("### 📣 Share Your Strengths")
-                st.write("Click below to copy a shareable message:")
+                st.write("Click below to share app link:")
                 
                 components.html(f"""
                     <input type="text" value="{share_message}" id="shareText" 
